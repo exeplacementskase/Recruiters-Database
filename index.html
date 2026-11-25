@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KASE Executive Placement & Talent Intelligence Dashboard</title>
+    <title>KASE Executive Placement &amp; Talent Intelligence Dashboard v7.0</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js CDN -->
@@ -41,11 +41,11 @@
             <div class="flex items-center space-x-3">
                 <div>
                     <h1 class="text-xl sm:text-2xl font-bold tracking-tight">Placement Division Master Dashboard</h1>
-                    <p class="text-xs text-sky-200">Kerala Academy for Skills Excellence (Govt. of Kerala)</p>
+                    <p class="text-xs text-sky-200">Kerala Academy for Skills Excellence (Govt. of Kerala) — Talent Intelligence Cell</p>
                 </div>
             </div>
             <div class="flex items-center space-x-3">
-                <button onclick="exportTableToCSV('kase_650_recruiters_master.csv')" class="bg-white/15 hover:bg-white/20 text-white text-xs font-semibold py-2 px-3 rounded-md transition flex items-center gap-1.5 border border-white/20">
+                <button onclick="exportTableToCSV('kase_650_recruiters_master_v7.csv')" class="bg-white/15 hover:bg-white/20 text-white text-xs font-semibold py-2 px-3 rounded-md transition flex items-center gap-1.5 border border-white/20">
                     <i class="fa-solid fa-file-excel"></i> Export CSV (<span id="exportBtnCount">650</span>)
                 </button>
                 <div class="bg-sky-900/60 text-sky-100 text-xs px-3 py-1.5 rounded-md border border-sky-700/50 flex items-center gap-2">
@@ -88,45 +88,45 @@
                     <div>
                         <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Recruiters Mapped</p>
                         <h3 class="text-2xl font-bold text-slate-800 mt-1" id="kpiTotalRecruiters">650 Companies</h3>
-                        <span class="text-xs text-emerald-600 font-medium" id="kpiTop100Count"><i class="fa-solid fa-check-double"></i> 10 per Sector Verified</span>
+                        <span class="text-xs text-emerald-600 font-medium"><i class="fa-solid fa-check-double"></i> 65 Sectors x 10 Verified</span>
                     </div>
                     <div class="bg-kase/10 text-kase p-3.5 rounded-xl text-xl">
                         <i class="fa-solid fa-building-user"></i>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-amber-500 flex items-center justify-between">
+                <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-emerald-500 flex items-center justify-between">
                     <div>
-                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Comprehensive Sectors</p>
-                        <h3 class="text-2xl font-bold text-slate-800 mt-1" id="kpiTotalSectors">65 Sectors</h3>
-                        <span class="text-xs text-amber-600 font-medium">100% Domain Coverage</span>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Est. Annual Hiring Demand</p>
+                        <h3 class="text-2xl font-bold text-slate-800 mt-1" id="kpiTotalDemand">1.19L – 2.23L</h3>
+                        <span class="text-xs text-emerald-600 font-medium">Direct + Apprentice Roles/Yr</span>
                     </div>
-                    <div class="bg-amber-500/10 text-amber-600 p-3.5 rounded-xl text-xl">
-                        <i class="fa-solid fa-layer-group"></i>
+                    <div class="bg-emerald-500/10 text-emerald-600 p-3.5 rounded-xl text-xl">
+                        <i class="fa-solid fa-briefcase"></i>
                     </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-sky-500 flex items-center justify-between">
                     <div>
                         <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Annual Enrolled Graduates</p>
                         <h3 class="text-2xl font-bold text-slate-800 mt-1">~2.7 Lakh+</h3>
-                        <span class="text-xs text-sky-600 font-medium">Across Engineering, ITI &amp; Poly</span>
+                        <span class="text-xs text-sky-600 font-medium">Engineering, ITI, Poly &amp; Degree</span>
                     </div>
                     <div class="bg-sky-500/10 text-sky-600 p-3.5 rounded-xl text-xl">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-purple-500 flex items-center justify-between">
+                <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-amber-500 flex items-center justify-between">
                     <div>
-                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Industry Associations</p>
-                        <h3 class="text-2xl font-bold text-slate-800 mt-1">15 Bodies</h3>
-                        <span class="text-xs text-purple-600 font-medium">GTech, CII, FICCI, KSSIA, CREDAI</span>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">NAPS / NATS &amp; Global</p>
+                        <h3 class="text-2xl font-bold text-slate-800 mt-1" id="kpiPathwaySummary">390 ITI | 571 Grad</h3>
+                        <span class="text-xs text-amber-600 font-medium" id="kpiGlobalSummary">58 Global / Export Pathways</span>
                     </div>
-                    <div class="bg-purple-500/10 text-purple-600 p-3.5 rounded-xl text-xl">
-                        <i class="fa-solid fa-network-wired"></i>
+                    <div class="bg-amber-500/10 text-amber-600 p-3.5 rounded-xl text-xl">
+                        <i class="fa-solid fa-globe"></i>
                     </div>
                 </div>
             </div>
 
-            <!-- Charts Section -->
+            <!-- Charts Row 1: Sector Benchmark & Category Breakdown -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div class="lg:col-span-2 bg-white rounded-xl shadow-sm p-6 border border-slate-200 flex flex-col">
                     <div class="flex justify-between items-center mb-4">
@@ -152,8 +152,34 @@
                     </div>
                     <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500 space-y-1.5">
                         <div class="flex justify-between"><span>Total Companies Mapped:</span><strong class="text-slate-800">650 Employers</strong></div>
-                        <div class="flex justify-between"><span>Minimum per Sector:</span><strong class="text-emerald-600">10 Companies</strong></div>
-                        <div class="flex justify-between"><span>Statewide Coverage:</span><strong class="text-slate-800">All 14 Districts</strong></div>
+                        <div class="flex justify-between"><span>Total Sectors Covered:</span><strong class="text-kase">65 Sectors (A–Z)</strong></div>
+                        <div class="flex justify-between"><span>Statewide Coverage:</span><strong class="text-emerald-600">All 14 Districts</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row 2: District-Wise Distribution & Qualification Stream Demand -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-200">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-kase"></i> District-Wise Employer Presence (14 Districts)
+                        </h3>
+                        <span class="text-xs text-slate-400">Includes multi-district hubs</span>
+                    </div>
+                    <div class="relative h-80">
+                        <canvas id="districtChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-200">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-user-graduate text-kase"></i> Recruiters by Qualification Stream
+                        </h3>
+                        <span class="text-xs text-slate-400">Multi-stream hiring overlap</span>
+                    </div>
+                    <div class="relative h-80">
+                        <canvas id="streamChart"></canvas>
                     </div>
                 </div>
             </div>
@@ -162,17 +188,35 @@
         <!-- TAB 2: INDUSTRY RECRUITERS -->
         <div id="tab-recruiters" class="tab-content space-y-6">
             <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-200">
-                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
+                <!-- Header & Live Summary Strip -->
+                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-5">
                     <div>
                         <h2 class="text-xl font-bold text-slate-800">Master Industry Recruiter Directory (650 Companies)</h2>
-                        <p class="text-sm text-slate-500">Showing <span id="filteredCount" class="font-bold text-kase">650</span> verified employers across all 14 districts &amp; 65 domains in Kerala.</p>
+                        <p class="text-sm text-slate-500">
+                            Showing <span id="filteredCount" class="font-bold text-kase">650</span> verified employers |
+                            Est. Filtered Hiring Capacity: <span id="filteredHiringRange" class="font-bold text-emerald-700">1,19,425 – 2,23,220</span> roles/yr
+                        </p>
                     </div>
-                    <div class="flex flex-wrap items-center gap-2.5 w-full lg:w-auto">
-                        <div class="relative flex-grow sm:w-60">
+                    <button onclick="resetFilters()" class="py-2 px-3.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold transition border border-slate-300 flex items-center gap-1.5">
+                        <i class="fa-solid fa-rotate-left"></i> Reset All Filters
+                    </button>
+                </div>
+
+                <!-- Multi-Attribute Filter Bar -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-3 mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <!-- 1. Keyword Search -->
+                    <div class="relative xl:col-span-2">
+                        <label class="block text-[11px] font-semibold text-slate-500 uppercase mb-1">Keyword Search</label>
+                        <div class="relative">
                             <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400"><i class="fa-solid fa-search"></i></span>
-                            <input type="text" id="recruiterSearch" onkeyup="filterRecruiters()" placeholder="Search company, role, hub..." class="w-full pl-9 pr-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-kase">
+                            <input type="text" id="recruiterSearch" onkeyup="filterRecruiters()" placeholder="Company, role, hub, trade..." class="w-full pl-9 pr-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-kase">
                         </div>
-                        <select id="districtFilter" onchange="filterRecruiters()" class="py-2 px-3 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-kase">
+                    </div>
+
+                    <!-- 2. District Filter -->
+                    <div>
+                        <label class="block text-[11px] font-semibold text-slate-500 uppercase mb-1">District (14 + Statewide)</label>
+                        <select id="districtFilter" onchange="filterRecruiters()" class="w-full py-2 px-2.5 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-kase">
                             <option value="">All 14 Districts</option>
                             <option value="Thiruvananthapuram">Thiruvananthapuram</option>
                             <option value="Kollam">Kollam</option>
@@ -190,12 +234,61 @@
                             <option value="Kasaragod">Kasaragod</option>
                             <option value="Statewide">Statewide / Multi-District</option>
                         </select>
-                        <select id="sectorFilter" onchange="filterRecruiters()" class="py-2 px-3 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-kase max-w-xs">
+                    </div>
+
+                    <!-- 3. Sector Filter -->
+                    <div>
+                        <label class="block text-[11px] font-semibold text-slate-500 uppercase mb-1">Focus Sector (A–Z)</label>
+                        <select id="sectorFilter" onchange="filterRecruiters()" class="w-full py-2 px-2.5 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-kase">
                             <option value="">All 65 Sectors (650)</option>
                         </select>
-                        <button onclick="resetFilters()" class="py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold transition border border-slate-200">
-                            Reset
-                        </button>
+                    </div>
+
+                    <!-- 4. Qualification Stream Filter -->
+                    <div>
+                        <label class="block text-[11px] font-semibold text-slate-500 uppercase mb-1">Qualification Stream</label>
+                        <select id="streamFilter" onchange="filterRecruiters()" class="w-full py-2 px-2.5 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-kase">
+                            <option value="">All Qualifications</option>
+                            <option value="ITI / Vocational">ITI / Vocational Trades</option>
+                            <option value="Polytechnic / Diploma">Polytechnic / Diploma</option>
+                            <option value="Engineering / Tech (B.Tech/MCA)">B.Tech / M.Tech / MCA</option>
+                            <option value="Healthcare / Nursing / Pharma">Nursing / Allied / Pharma</option>
+                            <option value="General Degree / PG / Mgmt">Degree / B.Com / MBA / PG</option>
+                            <option value="Plus Two / VHSE / SSLC">Plus Two / VHSE / SSLC</option>
+                        </select>
+                    </div>
+
+                    <!-- 5. Category / Tier Filter -->
+                    <div>
+                        <label class="block text-[11px] font-semibold text-slate-500 uppercase mb-1">Employer Tier</label>
+                        <select id="categoryFilter" onchange="filterRecruiters()" class="w-full py-2 px-2.5 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-kase">
+                            <option value="">All Employer Tiers</option>
+                            <option value="Yes - Top 100">Top 100 Anchor Firms</option>
+                            <option value="Sector Specific">Sector-Specific Units</option>
+                            <option value="Emerging Startup">Emerging Startups</option>
+                        </select>
+                    </div>
+
+                    <!-- 6. Hiring Volume Scale Filter -->
+                    <div>
+                        <label class="block text-[11px] font-semibold text-slate-500 uppercase mb-1">Hiring Volume Scale</label>
+                        <select id="scaleFilter" onchange="filterRecruiters()" class="w-full py-2 px-2.5 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-kase">
+                            <option value="">All Hiring Volumes</option>
+                            <option value="mass">Mass Recruiters (500+ / yr)</option>
+                            <option value="mid">Mid-Volume (150 – 499 / yr)</option>
+                            <option value="niche">Specialized (&lt; 150 / yr)</option>
+                        </select>
+                    </div>
+
+                    <!-- 7. Apprenticeship & Mobility Pathway Filter -->
+                    <div>
+                        <label class="block text-[11px] font-semibold text-slate-500 uppercase mb-1">Scheme / Mobility Pathway</label>
+                        <select id="pathwayFilter" onchange="filterRecruiters()" class="w-full py-2 px-2.5 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-kase">
+                            <option value="">All Pathways</option>
+                            <option value="NAPS (ITI)">NAPS Eligible (ITI Trade)</option>
+                            <option value="NATS (Grad/Diploma)">NATS Eligible (Grad/Diploma)</option>
+                            <option value="Global / Mobility">Global / Export / Overseas</option>
+                        </select>
                     </div>
                 </div>
 
@@ -212,7 +305,8 @@
                                 <th class="py-3 px-4 font-semibold">Core Operations</th>
                                 <th class="py-3 px-4 font-semibold">Key Roles Recruited</th>
                                 <th class="py-3 px-4 font-semibold">Est. Hiring</th>
-                                <th class="py-3 px-4 font-semibold">Qualification</th>
+                                <th class="py-3 px-4 font-semibold">Qualification &amp; Streams</th>
+                                <th class="py-3 px-4 font-semibold">Pathway Tags</th>
                                 <th class="py-3 px-4 font-semibold">Contact / Portal</th>
                             </tr>
                         </thead>
@@ -293,7 +387,7 @@
     <footer class="bg-slate-800 text-slate-400 py-6 mt-12 border-t border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
             <p>Kerala Academy for Skills Excellence (KASE) — Placement Division &amp; Talent Intelligence Cell</p>
-            <p>Master Database v6.0 (650 Verified Recruiters across 65 Sectors | All 14 Districts)</p>
+            <p>Master Database v7.0 (650 Verified Recruiters across 65 A–Z Sectors | 14 Districts | Multi-Attribute Intelligence)</p>
         </div>
     </footer>
 
@@ -6963,8 +7057,71 @@
             return matched;
         }
 
-        // Flatten sectorDatabase into recruitersData (650 items) and allSectors list
-        const allSectors = Object.keys(sectorDatabase);
+        function parseHiringRange(hiringStr) {
+            const nums = (hiringStr.match(/\d+/g) || []).map(Number);
+            if (nums.length === 0) return { min: 0, max: 0, scale: "niche" };
+            const min = nums[0];
+            const max = nums.length > 1 ? nums[1] : nums[0];
+            let scale = "niche";
+            if (max >= 500) scale = "mass";
+            else if (max >= 150) scale = "mid";
+            return { min, max, scale };
+        }
+
+        function resolveQualificationStreams(qualStr) {
+            const q = qualStr.toLowerCase();
+            const streams = [];
+            if (["iti", "craft", "kgte", "syrang", "lascar", "trade cert"].some(k => q.includes(k))) {
+                streams.push("ITI / Vocational");
+            }
+            if (["diploma", "cipet", "ame", "dmlt", "d.pharm", "gnm", "nis"].some(k => q.includes(k))) {
+                streams.push("Polytechnic / Diploma");
+            }
+            if (["b.tech", "m.tech", "b.e.", "mca", "vlsi", "embedded", "m.plan"].some(k => q.includes(k))) {
+                streams.push("Engineering / Tech (B.Tech/MCA)");
+            }
+            if (["nursing", "allied health", "biomed", "b.pharm", "m.pharm", "bpt", "mpt", "bams", "b.v.sc", "baslp", "dental", "mlt", "perfusion", "ayurveda"].some(k => q.includes(k))) {
+                streams.push("Healthcare / Nursing / Pharma");
+            }
+            if (["degree", "graduation", "b.com", "m.com", "bba", "mba", "bca", "b.sc", "m.sc", "ca", "acca", "cma", "cfa", "llb", "llm", "msw", "m.a.", "b.ed", "b.p.ed", "bhm", "bfa", "b.des", "b.f.sc", "b.arch"].some(k => q.includes(k))) {
+                streams.push("General Degree / PG / Mgmt");
+            }
+            if (["plus two", "sslc", "vhse", "self-taught", "ex-serv"].some(k => q.includes(k))) {
+                streams.push("Plus Two / VHSE / SSLC");
+            }
+            if (streams.length === 0) streams.push("General Degree / PG / Mgmt");
+            return streams;
+        }
+
+        function resolvePathways(sec, cat, ops, roles, qual) {
+            const blob = `${sec} ${cat} ${ops} ${roles} ${qual}`.toLowerCase();
+            const qLow = qual.toLowerCase();
+            const tags = [];
+            if (qLow.includes("iti") || blob.includes("naps") || blob.includes("trade apprentice")) {
+                tags.push("NAPS (ITI)");
+            }
+            if (["diploma", "b.tech", "b.com", "bba", "b.sc", "degree", "graduation"].some(k => qLow.includes(k)) || blob.includes("nats")) {
+                tags.push("NATS (Grad/Diploma)");
+            }
+            if (["german", "deutsche bahn", "db ag", "eu", "gcc", "uk", "gulf", "overseas", "odepc", "norka", "global", "export", "triple win", "mea-licensed", "oet"].some(k => blob.includes(k))) {
+                tags.push("Global / Mobility");
+            }
+            return tags;
+        }
+
+        function formatContactLink(contactStr) {
+            const trimmed = contactStr.trim();
+            if (trimmed.includes("@") && !trimmed.includes(" ")) {
+                return `<a href="mailto:${trimmed}" class="text-sky-700 hover:underline flex items-center gap-1"><i class="fa-regular fa-envelope text-[10px]"></i> ${trimmed}</a>`;
+            }
+            if (trimmed.includes(".") && !trimmed.includes(" ")) {
+                return `<a href="https://${trimmed}" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:underline flex items-center gap-1">${trimmed} <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>`;
+            }
+            return `<span class="text-slate-600">${trimmed}</span>`;
+        }
+
+        // Flatten sectorDatabase into enriched recruitersData (650 items, A-Z sorted)
+        const allSectors = Object.keys(sectorDatabase).sort((a, b) => a.localeCompare(b));
         const recruitersData = [];
         let currentFilteredData = [];
         let globalIdx = 1;
@@ -6972,6 +7129,10 @@
         allSectors.forEach(sectorName => {
             sectorDatabase[sectorName].forEach(c => {
                 const districtsArr = resolveDistricts(c[2]);
+                const hiringInfo = parseHiringRange(c[5]);
+                const streamsArr = resolveQualificationStreams(c[6]);
+                const pathwaysArr = resolvePathways(sectorName, c[1], c[3], c[4], c[6]);
+
                 recruitersData.push({
                     id: globalIdx++,
                     company: c[0].trim(),
@@ -6983,7 +7144,13 @@
                     operations: c[3].trim(),
                     roles: c[4].trim(),
                     hiring: c[5].trim(),
+                    hiringMin: hiringInfo.min,
+                    hiringMax: hiringInfo.max,
+                    hiringScale: hiringInfo.scale,
                     qualification: c[6].trim(),
+                    streams: streamsArr,
+                    pathways: pathwaysArr,
+                    pathwaysLabel: pathwaysArr.join(", "),
                     contact: c[7].trim()
                 });
             });
@@ -7081,21 +7248,21 @@
             activeBtn.classList.add('bg-kase', 'text-white', 'shadow-sm');
         }
 
-        function populateSectorDropdown() {
-            const select = document.getElementById('sectorFilter');
-            select.innerHTML = `<option value="">All ${allSectors.length} Sectors (${recruitersData.length})</option>`;
+        function populateFilterDropdowns() {
+            // Sectors (A-Z)
+            const secSelect = document.getElementById('sectorFilter');
+            secSelect.innerHTML = `<option value="">All ${allSectors.length} Sectors (${recruitersData.length})</option>`;
             allSectors.forEach(sec => {
                 const count = recruitersData.filter(r => r.sector === sec).length;
                 const opt = document.createElement('option');
                 opt.value = sec;
                 opt.textContent = `${sec} (${count})`;
-                select.appendChild(opt);
+                secSelect.appendChild(opt);
             });
-        }
 
-        function updateDistrictCounts() {
-            const select = document.getElementById('districtFilter');
-            Array.from(select.options).forEach(opt => {
+            // Districts with counts
+            const distSelect = document.getElementById('districtFilter');
+            Array.from(distSelect.options).forEach(opt => {
                 if (opt.value === "") {
                     opt.textContent = `All 14 Districts (${recruitersData.length})`;
                 } else {
@@ -7104,6 +7271,42 @@
                                       opt.value === "Kozhikode" ? "Kozhikode (Calicut)" :
                                       opt.value === "Statewide" ? "Statewide / Multi-District" : opt.value;
                     opt.textContent = `${baseLabel} (${count})`;
+                }
+            });
+
+            // Qualification Streams with counts
+            const streamSelect = document.getElementById('streamFilter');
+            Array.from(streamSelect.options).forEach(opt => {
+                if (opt.value !== "") {
+                    const count = recruitersData.filter(r => r.streams.includes(opt.value)).length;
+                    opt.textContent = `${opt.textContent} (${count})`;
+                }
+            });
+
+            // Employer Categories with counts
+            const catSelect = document.getElementById('categoryFilter');
+            Array.from(catSelect.options).forEach(opt => {
+                if (opt.value !== "") {
+                    const count = recruitersData.filter(r => r.category.includes(opt.value)).length;
+                    opt.textContent = `${opt.textContent} (${count})`;
+                }
+            });
+
+            // Hiring Scale with counts
+            const scaleSelect = document.getElementById('scaleFilter');
+            Array.from(scaleSelect.options).forEach(opt => {
+                if (opt.value !== "") {
+                    const count = recruitersData.filter(r => r.hiringScale === opt.value).length;
+                    opt.textContent = `${opt.textContent} (${count})`;
+                }
+            });
+
+            // Pathways with counts
+            const pathSelect = document.getElementById('pathwayFilter');
+            Array.from(pathSelect.options).forEach(opt => {
+                if (opt.value !== "") {
+                    const count = recruitersData.filter(r => r.pathways.includes(opt.value)).length;
+                    opt.textContent = `${opt.textContent} (${count})`;
                 }
             });
         }
@@ -7115,25 +7318,53 @@
             document.getElementById('filteredCount').textContent = data.length;
             document.getElementById('exportBtnCount').textContent = data.length;
 
+            // Compute live filtered hiring range
+            let sumMin = 0, sumMax = 0;
+            data.forEach(r => {
+                sumMin += r.hiringMin;
+                sumMax += r.hiringMax;
+            });
+            document.getElementById('filteredHiringRange').textContent = `${sumMin.toLocaleString('en-IN')} – ${sumMax.toLocaleString('en-IN')}`;
+
             if (data.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" class="py-8 text-center text-slate-400">No companies match the selected district, sector, or keyword criteria.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="12" class="py-8 text-center text-slate-400">No companies match the selected combination of filters. Click "Reset All Filters" to view all 650 employers.</td></tr>`;
                 return;
             }
 
             data.forEach(row => {
+                const streamBadges = row.streams.map(st => {
+                    let cls = 'bg-slate-100 text-slate-700';
+                    if (st.includes('ITI')) cls = 'bg-orange-50 text-orange-700 border border-orange-200';
+                    else if (st.includes('Polytechnic')) cls = 'bg-teal-50 text-teal-700 border border-teal-200';
+                    else if (st.includes('Engineering')) cls = 'bg-indigo-50 text-indigo-700 border border-indigo-200';
+                    else if (st.includes('Healthcare')) cls = 'bg-rose-50 text-rose-700 border border-rose-200';
+                    return `<span class="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium ${cls} mr-1 mt-1">${st}</span>`;
+                }).join('');
+
+                const pathwayBadges = row.pathways.map(pw => {
+                    let cls = 'bg-sky-50 text-sky-700 border border-sky-200';
+                    if (pw.includes('NAPS')) cls = 'bg-amber-50 text-amber-800 border border-amber-200';
+                    else if (pw.includes('Global')) cls = 'bg-emerald-50 text-emerald-700 border border-emerald-200';
+                    return `<span class="inline-block px-1.5 py-0.5 rounded text-[10px] font-semibold ${cls} mb-1 whitespace-nowrap">${pw}</span>`;
+                }).join('<br>');
+
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                    <td class="py-3 px-4 font-medium text-slate-500">${row.id}</td>
-                    <td class="py-3 px-4 font-bold text-slate-800">${row.company}</td>
-                    <td class="py-3 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-50 text-kase whitespace-nowrap">${row.sector}</span></td>
-                    <td class="py-3 px-4"><span class="px-2 py-0.5 rounded text-xs font-medium whitespace-nowrap ${row.category.includes('Top 100') ? 'bg-emerald-50 text-emerald-700' : (row.category.includes('Startup') ? 'bg-purple-50 text-purple-700' : 'bg-amber-50 text-amber-700')}">${row.category}</span></td>
-                    <td class="py-3 px-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-700 whitespace-nowrap">${row.districtsLabel}</span></td>
-                    <td class="py-3 px-4 text-slate-600 text-xs">${row.location}</td>
-                    <td class="py-3 px-4 text-slate-600 text-xs">${row.operations}</td>
-                    <td class="py-3 px-4 text-slate-600 text-xs">${row.roles}</td>
-                    <td class="py-3 px-4 font-semibold text-slate-800 whitespace-nowrap">${row.hiring}</td>
-                    <td class="py-3 px-4 text-slate-600 text-xs">${row.qualification}</td>
-                    <td class="py-3 px-4 text-sky-700 font-medium text-xs">${row.contact}</td>
+                    <td class="py-3 px-4 font-medium text-slate-500 align-top">${row.id}</td>
+                    <td class="py-3 px-4 font-bold text-slate-800 align-top">${row.company}</td>
+                    <td class="py-3 px-4 align-top"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-50 text-kase whitespace-nowrap">${row.sector}</span></td>
+                    <td class="py-3 px-4 align-top"><span class="px-2 py-0.5 rounded text-xs font-medium whitespace-nowrap ${row.category.includes('Top 100') ? 'bg-emerald-50 text-emerald-700' : (row.category.includes('Startup') ? 'bg-purple-50 text-purple-700' : 'bg-amber-50 text-amber-700')}">${row.category}</span></td>
+                    <td class="py-3 px-4 align-top"><span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-700 whitespace-nowrap">${row.districtsLabel}</span></td>
+                    <td class="py-3 px-4 text-slate-600 text-xs align-top">${row.location}</td>
+                    <td class="py-3 px-4 text-slate-600 text-xs align-top">${row.operations}</td>
+                    <td class="py-3 px-4 text-slate-600 text-xs align-top">${row.roles}</td>
+                    <td class="py-3 px-4 font-semibold text-slate-800 whitespace-nowrap align-top">${row.hiring}</td>
+                    <td class="py-3 px-4 text-slate-600 text-xs align-top">
+                        <div>${row.qualification}</div>
+                        <div class="mt-0.5">${streamBadges}</div>
+                    </td>
+                    <td class="py-3 px-4 align-top">${pathwayBadges || '<span class="text-xs text-slate-400">—</span>'}</td>
+                    <td class="py-3 px-4 font-medium text-xs align-top whitespace-nowrap">${formatContactLink(row.contact)}</td>
                 `;
                 tbody.appendChild(tr);
             });
@@ -7143,18 +7374,29 @@
             const search = document.getElementById('recruiterSearch').value.toLowerCase();
             const district = document.getElementById('districtFilter').value;
             const sector = document.getElementById('sectorFilter').value;
+            const stream = document.getElementById('streamFilter').value;
+            const category = document.getElementById('categoryFilter').value;
+            const scale = document.getElementById('scaleFilter').value;
+            const pathway = document.getElementById('pathwayFilter').value;
 
             const filtered = recruitersData.filter(row => {
-                const matchSearch = row.company.toLowerCase().includes(search) ||
+                const matchSearch = !search ||
+                                    row.company.toLowerCase().includes(search) ||
                                     row.sector.toLowerCase().includes(search) ||
                                     row.location.toLowerCase().includes(search) ||
                                     row.districtsLabel.toLowerCase().includes(search) ||
                                     row.operations.toLowerCase().includes(search) ||
                                     row.roles.toLowerCase().includes(search) ||
-                                    row.qualification.toLowerCase().includes(search);
-                const matchDistrict = district === "" || row.districts.includes(district);
-                const matchSector = sector === "" || row.sector === sector;
-                return matchSearch && matchDistrict && matchSector;
+                                    row.qualification.toLowerCase().includes(search) ||
+                                    row.pathwaysLabel.toLowerCase().includes(search);
+                const matchDistrict = !district || row.districts.includes(district);
+                const matchSector = !sector || row.sector === sector;
+                const matchStream = !stream || row.streams.includes(stream);
+                const matchCategory = !category || row.category.includes(category);
+                const matchScale = !scale || row.hiringScale === scale;
+                const matchPathway = !pathway || row.pathways.includes(pathway);
+
+                return matchSearch && matchDistrict && matchSector && matchStream && matchCategory && matchScale && matchPathway;
             });
             renderRecruiters(filtered);
         }
@@ -7163,6 +7405,10 @@
             document.getElementById('recruiterSearch').value = '';
             document.getElementById('districtFilter').value = '';
             document.getElementById('sectorFilter').value = '';
+            document.getElementById('streamFilter').value = '';
+            document.getElementById('categoryFilter').value = '';
+            document.getElementById('scaleFilter').value = '';
+            document.getElementById('pathwayFilter').value = '';
             renderRecruiters(recruitersData);
         }
 
@@ -7228,8 +7474,8 @@
         }
 
         function exportTableToCSV(defaultFilename) {
-            const BOM = "﻿";
-            const header = ["#", "Company Name", "Focus Sector", "Category", "District(s)", "Kerala Base", "Core Operations", "Key Roles Recruited", "Est. Hiring", "Qualification", "Contact / Portal"];
+            const BOM = "\uFEFF";
+            const header = ["#", "Company Name", "Focus Sector", "Category", "District(s)", "Kerala Base", "Core Operations", "Key Roles Recruited", "Est. Hiring", "Qualification", "Qualification Streams", "Apprenticeship & Mobility Pathways", "Contact / Portal"];
             function esc(v) {
                 return '"' + String(v).replace(/"/g, '""').trim() + '"';
             }
@@ -7237,14 +7483,16 @@
             currentFilteredData.forEach(r => {
                 lines.push([
                     r.id, r.company, r.sector, r.category, r.districtsLabel,
-                    r.location, r.operations, r.roles, r.hiring, r.qualification, r.contact
+                    r.location, r.operations, r.roles, r.hiring, r.qualification,
+                    r.streams.join(", "), r.pathwaysLabel, r.contact
                 ].map(esc).join(","));
             });
             const distVal = document.getElementById('districtFilter').value;
             const secVal = document.getElementById('sectorFilter').value;
+            const strmVal = document.getElementById('streamFilter').value;
             let filename = defaultFilename;
-            if (distVal || secVal) {
-                const tag = [distVal, secVal].filter(Boolean).join("_").replace(/[^a-zA-Z0-9]+/g, "_").toLowerCase();
+            if (distVal || secVal || strmVal) {
+                const tag = [distVal, secVal, strmVal].filter(Boolean).join("_").replace(/[^a-zA-Z0-9]+/g, "_").toLowerCase();
                 filename = `kase_recruiters_${tag}.csv`;
             }
             const blob = new Blob([BOM + lines.join("\n")], { type: "text/csv;charset=utf-8;" });
@@ -7257,13 +7505,13 @@
         }
 
         function initCharts() {
+            // 1. Sector Bar Chart (A-Z)
             const sectorCounts = allSectors.map(sec => ({
                 sector: sec,
                 count: recruitersData.filter(r => r.sector === sec).length
             }));
 
-            const sectorCtx = document.getElementById('sectorChart').getContext('2d');
-            new Chart(sectorCtx, {
+            new Chart(document.getElementById('sectorChart').getContext('2d'), {
                 type: 'bar',
                 data: {
                     labels: sectorCounts.map(s => s.sector),
@@ -7287,17 +7535,16 @@
                 }
             });
 
+            // 2. Category Doughnut Chart
             const top100Count = recruitersData.filter(r => r.category.includes('Top 100')).length;
             const sectorSpecCount = recruitersData.filter(r => r.category.includes('Sector Specific')).length;
             const startupCount = recruitersData.filter(r => r.category.includes('Emerging Startup')).length;
 
             document.getElementById('kpiTotalRecruiters').textContent = `${recruitersData.length} Companies`;
-            document.getElementById('kpiTotalSectors').textContent = `${allSectors.length} Sectors`;
             document.getElementById('tabRecruiterCount').textContent = recruitersData.length;
             document.getElementById('liveDbBadge').textContent = `Live Database (${recruitersData.length} Recruiters | ${allSectors.length} Sectors)`;
 
-            const tierCtx = document.getElementById('tierChart').getContext('2d');
-            new Chart(tierCtx, {
+            new Chart(document.getElementById('tierChart').getContext('2d'), {
                 type: 'doughnut',
                 data: {
                     labels: [`Top 100 Anchor Firms (${top100Count})`, `Sector-Specific Units (${sectorSpecCount})`, `Emerging Startups (${startupCount})`],
@@ -7316,11 +7563,70 @@
                     }
                 }
             });
+
+            // 3. District Distribution Bar Chart (14 Districts)
+            const distNames = ["Thiruvananthapuram", "Kollam", "Pathanamthitta", "Alappuzha", "Kottayam", "Idukki", "Ernakulam", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Wayanad", "Kannur", "Kasaragod"];
+            const distCounts = distNames.map(d => recruitersData.filter(r => r.districts.includes(d)).length);
+
+            new Chart(document.getElementById('districtChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: distNames,
+                    datasets: [{
+                        label: 'Mapped Employers',
+                        data: distCounts,
+                        backgroundColor: '#14749a',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 45, minRotation: 45 } }
+                    }
+                }
+            });
+
+            // 4. Qualification Stream Bar Chart
+            const streamLabels = [
+                "ITI / Vocational",
+                "Polytechnic / Diploma",
+                "General Degree / PG / Mgmt",
+                "Engineering / Tech (B.Tech/MCA)",
+                "Healthcare / Nursing / Pharma",
+                "Plus Two / VHSE / SSLC"
+            ];
+            const streamCounts = streamLabels.map(st => recruitersData.filter(r => r.streams.includes(st)).length);
+
+            new Chart(document.getElementById('streamChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: streamLabels,
+                    datasets: [{
+                        label: 'Recruiting Employers',
+                        data: streamCounts,
+                        backgroundColor: ['#f39c12', '#0d9488', '#0e5774', '#4f46e5', '#e11d48', '#64748b'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                        y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+                    }
+                }
+            });
         }
 
         window.onload = function() {
-            populateSectorDropdown();
-            updateDistrictCounts();
+            populateFilterDropdowns();
             renderRecruiters(recruitersData);
             renderTalent();
             renderAssociations();
